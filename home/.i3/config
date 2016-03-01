@@ -184,8 +184,8 @@ bar {
 bindsym $mod+shift+x exec i3lock --color 475263
 # Pulse Audio 
 set $sink `pactl list short sinks | grep RUNNING | cut -f1`
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink -10%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink -- +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink -- -10%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle
 
 # Sreen brightness controls
